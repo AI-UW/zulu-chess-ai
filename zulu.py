@@ -74,27 +74,27 @@ class Game():
                         that will be the input to your neural network)
         """
         board = torch.zeros((3,8))
-        board[0,0] = 1
-        board[0,1] = -1
-        board[0,2] = -1
-        board[0,3] = -1
-        board[0,4] = -1
-        board[0,6] = 1
-        board[0,7] = 1
-        board[1,0] = 1
-        board[1,1] = 1
-        board[1,2] = -1
-        board[1,3] = 1
-        board[1,4] = -1
-        board[1,5] = 1
-        board[1,6] = -1
-        board[1,7] = 1
-        board[2,0] = 1
-        board[2,6] = 1
-        board[2,7] = -1
+        # board[0,0] = 1
+        # board[0,1] = -1
+        # board[0,2] = -1
+        # board[0,3] = -1
+        # board[0,4] = -1
+        # board[0,6] = 1
+        # board[0,7] = 1
+        # board[1,0] = 1
+        # board[1,1] = 1
+        # board[1,2] = -1
+        # board[1,3] = 1
+        # board[1,4] = -1
+        # board[1,5] = 1
+        # board[1,6] = -1
+        # board[1,7] = 1
+        # board[2,0] = 1
+        # board[2,6] = 1
+        # board[2,7] = -1
 
         #3 squares of 3x3 (innermost, middle, outermost)
-        metadata = torch.tensor([10,8,0,0,-1,-1,0,0,1])
+        metadata = torch.tensor([12,12,0,0,-1,-1,12,12,0])
         #vector that represents each player's remaining tokens (alive, not necessarily placeable) + whether each player has just captured a row + the cow selected for moving for each player + the remaining cow tokens available to place for each players + the game phase code
         return board, metadata
 
